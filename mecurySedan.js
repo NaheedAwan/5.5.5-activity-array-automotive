@@ -1,6 +1,6 @@
 //this includes the vehicle class as a module
 const VehicleModule = require("./vehicleBaseClass.js")
-class Sedan extends VehicleModule.Vehicle {
+class Car extends VehicleModule.Vehicle {
     constructor ( passenger, maxPassenger, maxSpeed, numberOfWheels, scheduleService, fuel  ){
     super (make, model, year, color, mileage)
     this.passenger = 0
@@ -12,9 +12,9 @@ class Sedan extends VehicleModule.Vehicle {
 }
 loadPassenger(num){
     if( passenger < this.maxPassenger){
-        return "There is more Space can load more"
+        return "There is Space can load more"
     }else {
-        return "no more room available "
+        return "No more room available "
     }
 }
 scheduleService(){
@@ -28,5 +28,5 @@ scheduleService(){
 //this shows how to call from this module...
 let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
 console.log(v.make)
-let sedan = new Sedan("Mercury", "Sedan","2001", "Red", 30000)
+let sedan = new Car("Mercury", "Sedan","2001", "Red", 30000)
 console.log(sedan.speed)
